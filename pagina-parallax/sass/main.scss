@@ -1,0 +1,308 @@
+$purple-dark: #170312;
+$purple-medium: #33032D;
+$purple-light: #531253;
+$gray-light: #EAEAEA;
+$white: #F4FFFD;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-size: 22px;
+}
+
+/* ----- HEADER ----- */
+
+.contenido-header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/bg-01.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .fondo {
+        width: 0%;
+        height: 100%;
+        max-width: 100%;
+        background-image: url('../img/bg-03.png');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .texto {
+        width: calc(100vw - 20px);
+        height: 100vh;
+        font-size: 90px;
+        font-weight: 400;
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: red;
+        mix-blend-mode: multiply;
+    }
+}
+
+/* ----- NAVBAR ----- */
+
+.menu {
+    background-color: $purple-medium;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    margin-bottom: 60px;
+
+    a {
+        display: inline-block;
+        padding: 10px 30px;
+        font-size: 26px;
+        background-color: $purple-medium;
+        margin: 0 10px;
+        transition: .5s ease all;
+        color: $gray-light;
+        text-decoration: none;
+
+        &:hover {
+            transform: translateY(18px);
+            background-color: $purple-light;
+        }
+    }
+}
+
+/* ----- NOSOTROS ----- */
+
+.nosotros {
+    margin-bottom: 60px;
+
+    .titulo {
+        width: 70%;
+        font-size: 44px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    .enlace {
+        display: inline-block;
+        margin-top: 40px;
+        color: $purple-light;
+        font-weight: 700;
+        border-bottom: 1px solid transparent;
+        transition: .3s ease all;
+
+        &:hover {
+            text-decoration: none;
+            letter-spacing: 3px;
+            border-bottom: 1px solid $purple-light;
+        }
+    }
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: $purple-dark;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    span {
+        background-color: $gray-light;
+        padding: 0 15px;
+        z-index: 99;
+        position: relative;
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 2px;
+        width: 100%;
+        background: $purple-dark;
+        position: relative;
+        top: -29px;
+        z-index: 1;
+    }
+}
+
+/* ----- PRODUCTOS ----- */
+
+.productos {
+    background: $gray-light;
+    padding: 20px;
+    margin-bottom: 60px;
+
+    .titulo {
+        width: 70%;
+        font-size: 44px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    .producto {
+        position: relative;
+        width: 100%;
+
+        &:hover {
+
+            .overlay {
+                width: 100%;
+                opacity: .8;
+            }
+        }
+
+        .overlay-texto {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            white-space: nowrap;
+            color: $white;
+            font-size: 18px;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            border-top: 1px solid #FFFFFF;
+            border-bottom: 1px solid #FFFFFF;
+        }
+
+        .img-fluid {
+            width: 1000px;
+            height: 200px;
+        }
+    }
+
+    .overlay {
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $purple-light;
+        overflow: hidden;
+        transition: .5s ease;
+    }
+
+    .btn-productos {
+        background: $purple-light;
+        color: #FFFFFF;
+        padding: 7px 20px;
+        text-transform: uppercase;
+        font-size: 16px;
+        border: 2px solid transparent;
+        transition: .3s ease;
+
+        &:hover {
+            background-color: transparent;
+            border: 2px solid $purple-light;
+            color: $purple-light;
+        }
+    }
+}
+
+/* ----- SEPARADOR ----- */
+
+.separador {
+    width: 100%;
+    height: 250px;
+    background-image: url('../img/bg-02.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+
+    p {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-family: 'Noto Serif', serif;
+        padding: 10px;
+    }
+}
+
+/* ----- ACERCA DE ----- */
+
+.acerca-de {
+    margin-bottom: 60px;
+}
+
+/* ----- GALERIA ----- */
+
+.galeria {
+    margin-bottom: 60px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.contacto {
+    margin-bottom: 60px;
+}
+
+.redes-sociales {
+    padding: 10px;
+    background-color: $purple-light;
+
+    img {
+        padding: 5px;
+        border-radius: 100%;
+        width: 50px;
+        transition: .3s ease all;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+/* ----- MEDIAQUERIES ----- */
+
+@media screen and (max-width: 992px) {
+    p {
+        font-size: 18px;
+    }
+
+    .contenido-header .texto {
+        font-size: 60px;
+    }
+
+    .menu a {
+        font-size: 20px;
+    }
+
+    .nosotros {
+        .titulo {
+            font-size: 30px;
+        }
+    }
+
+    .productos {
+        .titulo {
+            font-size: 30px;
+        }
+    }
+}
